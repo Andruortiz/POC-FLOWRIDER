@@ -41,7 +41,7 @@ public class PollingOutboxRelay(
                 await db.SaveChangesAsync(stoppingToken);
             }
 
-            await Task.Delay(TimeSpan.FromSeconds(2), stoppingToken);
+            await Task.Delay(TimeSpan.FromSeconds(30), stoppingToken);
         }
     }
 }
