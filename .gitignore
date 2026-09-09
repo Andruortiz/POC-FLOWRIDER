@@ -1,0 +1,14 @@
+## .NET
+bin/
+obj/
+*.user
+.vs/
+
+## IDE
+.idea/
+
+## Entorno local (nunca credenciales reales en el repo)
+.env
+
+## Logs
+*.log

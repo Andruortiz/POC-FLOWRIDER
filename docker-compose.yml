@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: flowride_poc
+      POSTGRES_USER: flowride
+      POSTGRES_PASSWORD: flowride
+    ports:
+      - "5432:5432"
+    volumes:
+      - flowride_poc_postgres:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    environment:
+      RABBITMQ_DEFAULT_USER: flowride
+      RABBITMQ_DEFAULT_PASS: flowride
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+volumes:
+  flowride_poc_postgres:
